@@ -20,9 +20,8 @@ fi
 # UV cache directory (persistent across sessions)
 export UV_CACHE_DIR="$TREE_SITTER_DB_APP_DIR/.uv-cache"
 
-# Convenience wrapper for tree-sitter-db commands
-# Usage: tsdb <command> [args...]
-# Commands: index, info, find, callers, callees
+# Convenience wrapper for tree-sitter-db
+# Usage: tsdb <repo_path> [--db path] [--exclude pattern] [--verbose]
 tsdb() {
     local cmd="${1:-}"
     if [[ -z "$cmd" ]]; then
